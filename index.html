@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Preview</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="index.html"><img src="logo.png" alt="Logo"></a>
+        </div>
+        <button id="mode-toggle"></button>
+    </nav>
+    <div class="main-content">
+        <div class="categories-container">
+            <a href="#" class="category-link">Komedia</a>
+            <a href="#" class="category-link">Horror</a>
+            <a href="#" class="category-link">Akcja</a>
+            <a href="#" class="category-link">Animowany</a>
+            <a href="#" class="category-link">Inne</a>
+        </div>
+    
+        <div class="video-container" id="random-video">
+            <h3>Tytuł</h3>
+            <p></p>
+            <video id="video-player" controls>
+                <source src="" type="video/mp4">
+                Twoja przeglądarka nie obsługuje tagu wideo.
+            </video>
+        </div>        
+    </div>       
+    <script src="script.js"></script>
+</body>
+</html>

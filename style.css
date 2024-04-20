@@ -1,0 +1,140 @@
+body {
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e5e3df;
+    transition: background-color 0.3s ease;
+}
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+.dark-mode nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #5b5b5b;
+    color: #fff;
+}
+
+/* Przycisk do zmiany motywu strony */
+#mode-toggle {
+    background-color: transparent;
+    background-image: url('darkmode.svg'); 
+    background-repeat: no-repeat; 
+    background-size: 100%; 
+    background-position: center; 
+    border: none; 
+    padding: 15px; 
+    width: 40px;
+    height: 40px;
+}
+
+/* Logo */
+.logo img {
+    height: 30px;
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-wrap: wrap; /* Pozwala na zawijanie elementów na mniejszych ekranach */
+}
+
+/* Kafelki z kategoriami */
+.categories-container, .video-container {
+    width: 100%; /* Dla małych ekranów szerokość 100% */
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.category-link {
+    display: flex; 
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    align-items: center; /* Wyśrodkowanie w pionie */
+    padding: 10px;
+    margin: 5px;
+    background-color: #b99a45;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    height: 100px;
+    font-size: 25px;
+}
+
+.category-link:hover {
+    background-color: #866f32;
+}
+
+.video-container {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.video-container video {
+    width: 80%;
+    max-width: 100%; /* Video nie będzie większe niż jego kontener */
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #b99a45;
+    color: #fff;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #866f32;
+}
+
+.quality-buttons {
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media screen and (min-width: 601px) {
+    /* Dla ekranów większych niż 600px przywracamy oryginalne style */
+    .categories-container {
+        width: 25%;
+    }
+    .video-container {
+        width: 75%;
+    }
+}
+@media screen and (max-width: 600px) {
+    /* Wyświetlanie dla urządzeń mobilnych i oknach < 600 px */
+    .categories-container, .video-container {
+        width: 100%;
+    }
+    #mode-toggle {
+        padding: 26px; /* Zmniejszamy wypełnienie przycisku */
+        background-size: 80%; /* Redukujemy wielkość ikony */
+    }
+    button {
+        display: block; /* Przyciski będą teraz blokowe, co spowoduje, że będą na osobnych wierszach */
+        width: 100%; /* Szerokość 100% zapewnia, że przyciski zajmą całą dostępną szerokość */
+        margin: 5px 0; /* Dodajemy marginesy górny i dolny między przyciskami */
+    }
+}
